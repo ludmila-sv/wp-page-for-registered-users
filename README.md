@@ -1,12 +1,11 @@
-1) Одобрение новых пользователей сделано через плагин WP approve users. Настрройки плагина тут /wp-admin/options-general.php?page=wp-approve-user
-Одобрять юзеров тут /wp-admin/users.php?action=wpau_update&count=1
+1) New users can be approved via the plugin WP approve users. Settings: /wp-admin/options-general.php?page=wp-approve-user
+Users are managed here /wp-admin/users.php?action=wpau_update&count=1
 
-2) У страниц сделала новый статус "Для зарегистрированных"
-ВАЖНО. Обратите внимание, что при редактировании страниц, чтобы сохранялся статус, надо жать на "Сохранить", а не "Опубликовать". При нажатии на "Опубликовать" статус сделается "опубликовано".
+2) New page status "For registered users" is added.
+NB. While editing a page, you need to press "Save", not "Publish" button to save changes and preserve the status. If you press "Publish" the status will become "published".
 
-3) В файл дефолтного макета страницы page.php добавила проверку статуса
-Если статус "Для зарегистрированных", подключается новый файл page-login.php - там формы регистрации и авторизации. Для них сохранила логику вордпресса.
-Восстановление пароля тоже работает.
+3) Status check is added into the default page template page.php.
+If a page has the "For registered users" status, new file page-login.php is included/ It contains register and login forms. The file is a short version of the wp-login.php file from the root folder.
 
-ВАЖНО некоторые функции из page-login.php должны срабатывать ДО того, как отправлены заголовки, поэтому get_header(); идет ПОСЛЕ подключения page-login.php.
-Внутри page-login.php вставлено get_header(); в нужном месте.
+NB! Some functions from page-login.php should be executed BEFORE headers are sent, so get_header(); is put AFTER the point where page-login.php is included.
+get_header() is also inserted into page-login.php in appropriate place.
