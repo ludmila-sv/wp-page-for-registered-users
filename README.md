@@ -1,6 +1,6 @@
 TASK: create a page visible for registered users only. Unregistered users see a registration form on the page. When a user is registering admin must aprove the registration before the user can get access to the page.
 
-RREALIZATION:
+REALIZATION:
 
 1) New users can be approved via the plugin WP approve users. Settings: /wp-admin/options-general.php?page=wp-approve-user
 Users are managed here /wp-admin/users.php?action=wpau_update&count=1
