@@ -1,4 +1,4 @@
-TASK: create a page visible for registered users only. Unregistered users see a registration form on the page. When a user is registering admin must aprove the registration before user can get access to the page.
+TASK: create a page visible for registered users only. Unregistered users see a registration form on the page. When a user is registering admin must aprove the registration before the user can get access to the page.
 
 RREALIZATION:
 
